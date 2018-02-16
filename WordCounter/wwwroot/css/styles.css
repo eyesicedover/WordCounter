@@ -1,0 +1,19 @@
+body {
+  background-color: #93B1A7;
+  color: #C46D5E;
+}
+
+
+.jumbotron {
+  background-color: #7A7273;
+  font-family: 'Alfa Slab One', cursive;
+  text-shadow: 2px 2px 5px black;
+}
+
+.container {
+  font-family: 'Raleway', sans-serif;
+}
+
+.well {
+  background-color: #EBF0EF;
+}
