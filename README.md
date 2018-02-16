@@ -4,7 +4,7 @@
 #### _By Stephanie Faber_  
 
 ## Description
-_This is a project designed to take a user input word and block of text and then determine the number of times that word appears in the text._  
+_This is a project designed to take a user input word and block of text and then determine the number of times that word appears in the text. The home page consists of a form asking for the word to search for, as well as the block of text to search through. Once submitted, the user is taken to another page displaying their inputs and returning to them the number of times the word appeared. Finally, there is a link to route the user back to the homepage._  
 
 ## Specifications
 
