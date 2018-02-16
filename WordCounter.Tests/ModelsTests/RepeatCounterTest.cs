@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 using WordCounter.Models;
 
 namespace WordCounter.Models.Tests
@@ -53,6 +54,24 @@ namespace WordCounter.Models.Tests
 
             //Assert
             Assert.AreEqual(counter, compare);
+        }
+
+        [TestMethod]
+        public void SplitText_ReturnSplitText_True()
+        {
+            //Arrange
+            string word = "hello";
+            string text = "hello world I'm Stephanie";
+            RepeatCounter newRepeatCounter = new RepeatCounter(word, text);
+            List<string> compare = new List<string> {};
+            List<string> test = new List<string> {"hello", "world", "I'm", "Stephanie"};
+
+            //Act
+            newRepeatCounter.SetSplitText();
+            compare = newRepeatCounter.GetSplitText();
+
+            //Assert
+            CollectionAssert.AreEqual(compare, test);
         }
     }
 }

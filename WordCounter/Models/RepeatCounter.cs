@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace WordCounter.Models
 {
@@ -7,6 +9,7 @@ namespace WordCounter.Models
         private string _word;
         private string _text;
         private int _counter;
+        private List<string> _splitText = new List<string> {};
 
         public RepeatCounter(string inputWord, string inputText)
         {
@@ -28,11 +31,24 @@ namespace WordCounter.Models
         {
           return _counter;
         }
-        
+
         public void SetCounter(int newCounter)
         {
             _counter = newCounter;
         }
 
+        public List<string> GetSplitText()
+        {
+            return _splitText;
+        }
+
+        public void SetSplitText()
+        {
+            string[] holder = Regex.Split(_text, " ");
+            for (int index = 0; index < holder.Length; index++)
+            {
+                _splitText.Add(holder[index]);
+            }
+        }
     }
 }
