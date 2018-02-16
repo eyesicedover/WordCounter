@@ -35,7 +35,7 @@ _This is a project designed to take a user input word and block of text and then
 
 * _Download and install Mono for your platform_
 
-* _In Mono command prompt, navigate to ContactBook repository_
+* _In Mono command prompt, navigate to this project's folder_
 
 * _In Mono command prompt, enter >dotnet restore_
 
@@ -45,7 +45,7 @@ _This is a project designed to take a user input word and block of text and then
 
 * _If there is an error, please contact me via email and describe your issue_
 
-* _When the command prompt runs the build, enter localhost:5000/contacts to your web browser. This should take you to the index page._
+* _When the command prompt runs the build, enter localhost:5000 to your web browser. This should take you to the index page._
 
 Github Repository Link (https://github.com/eyesicedover/ContactBook)
 
