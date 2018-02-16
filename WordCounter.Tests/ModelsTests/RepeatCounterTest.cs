@@ -22,5 +22,20 @@ namespace WordCounter.Models.Tests
             Assert.AreEqual(word, compare);
         }
 
+
+        [TestMethod]
+        public void InputText_ReturnText()
+        {
+            //Arrange
+            string word = "hello";
+            string text = "hello world";
+            RepeatCounter newRepeatCounter = new RepeatCounter(word, text);
+
+            //Act
+            string compare = newRepeatCounter.GetText();
+
+            //Assert
+            Assert.AreEqual(text, compare);
+        }
     }
 }

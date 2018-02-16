@@ -19,5 +19,9 @@ namespace WordCounter.Models
             return _word;
         }
 
+        public string GetText()
+        {
+            return _text;
+        }
     }
 }
