@@ -23,5 +23,16 @@ namespace WordCounter.Models
         {
             return _text;
         }
+
+        public int GetCounter()
+        {
+          return _counter;
+        }
+        
+        public void SetCounter(int newCounter)
+        {
+            _counter = newCounter;
+        }
+
     }
 }

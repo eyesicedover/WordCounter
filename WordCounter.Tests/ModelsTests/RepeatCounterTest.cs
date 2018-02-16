@@ -8,7 +8,7 @@ namespace WordCounter.Models.Tests
     public class ProjectTest
     {
         [TestMethod]
-        public void InputWord_ReturnWord()
+        public void InputWord_ReturnWord_True()
         {
             //Arrange
             string word = "hello";
@@ -24,7 +24,7 @@ namespace WordCounter.Models.Tests
 
 
         [TestMethod]
-        public void InputText_ReturnText()
+        public void InputText_ReturnText_True()
         {
             //Arrange
             string word = "hello";
@@ -36,6 +36,23 @@ namespace WordCounter.Models.Tests
 
             //Assert
             Assert.AreEqual(text, compare);
+        }
+
+        [TestMethod]
+        public void SetCounter_GetCounter_True()
+        {
+            //Arrange
+            string word = "hello";
+            string text = "hello world";
+            int counter = 12;
+            RepeatCounter newRepeatCounter = new RepeatCounter(word, text);
+
+            //Act
+            newRepeatCounter.SetCounter(counter);
+            int compare = newRepeatCounter.GetCounter();
+
+            //Assert
+            Assert.AreEqual(counter, compare);
         }
     }
 }
