@@ -50,5 +50,16 @@ namespace WordCounter.Models
                 _splitText.Add(holder[index]);
             }
         }
+
+        public void DoCount()
+        {
+          for (int j = 0; j < _splitText.Count; j++)
+          {
+              if (_splitText[j].ToLower() == _word.ToLower())
+              {
+                  _counter++;
+              }
+          }
+        }
     }
 }

@@ -73,5 +73,22 @@ namespace WordCounter.Models.Tests
             //Assert
             CollectionAssert.AreEqual(compare, test);
         }
+
+        [TestMethod]
+        public void DoCount_True()
+        {
+            //Arrange
+            string word = "hello";
+            string text = "hello world hello I'm hello Stephanie";
+            RepeatCounter newRepeatCounter = new RepeatCounter(word, text);
+            newRepeatCounter.SetSplitText();
+
+            //Act
+            newRepeatCounter.DoCount();
+            int compare = newRepeatCounter.GetCounter();
+
+            //Assert
+            Assert.AreEqual(compare, 3);
+        }
     }
 }
