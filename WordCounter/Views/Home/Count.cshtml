@@ -8,7 +8,16 @@
   <h3>Your text was:</h3>
   <p>@Model.GetText()</p>
   <br>
-  <h3>Your word appeared @Model.GetCounter() times in the text!</h3>
+  @{
+    if (@Model.GetCounter() == 0)
+    {
+      <h3>Oh no! Your word did not appear in the text.</h3>
+    }
+    else
+    {
+      <h3>Your word appeared @Model.GetCounter() times in the text!</h3>
+    }
+  }
   <hr>
   <h4><a href="/">Go Back</a></h4>
 </div>
