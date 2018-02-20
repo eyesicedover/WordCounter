@@ -20,7 +20,20 @@ _This is a project designed to take a user input word and block of text and then
 * Example input: User submits form on Index
 * Example output: new RepeatCounter is created, method is run on instance to generate number of times word appears
 
-4. On Count, the user's word and text is displayed, along with the number of times the word appears. At the bottom is a link "Go Back", on click takes back to Index.
+4a. A word counted even when ended with a comma.
+* Example input: Word is "hello". Text is "What is hello, if not a longer way of saying hi?"
+* Example output: Count is 1.
+
+4b. A word is counted when ended with a period, or other ending punctuation like ! or ?. This is because ending punctuation will be assumed as the end of a sentence.
+* Example input: Word is "hello". Text is "To you a hello!"
+* Example output: Count is 1.
+
+4c. Contractions will not be broken up and counted. Trying to account all contractions as two words, such as "there's" as "there" and "is" OR "has" is too circumstantial and out of the scope of this project.
+* Example input: Word is "hello". Text is "Hello's for you, to you a hello. What is hello, if not a longer way of saying hi?"
+* Example output: Count is 2. Hello's does not count because it's contracted with -'s. Hello's does not equal hello.
+
+
+5. On Count, the user's word and text is displayed, along with the number of times the word appears. At the bottom is a link "Go Back", on click takes back to Index.
 * Example input: User's word, text, and word counter is displayed. Go Back is clicked.
 * Example output: Index appears with empty form
 

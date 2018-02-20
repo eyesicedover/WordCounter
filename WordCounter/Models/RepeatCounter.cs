@@ -43,7 +43,7 @@ namespace WordCounter.Models
 
         public void SetSplitText()
         {
-            string[] separators = {" ", ",", "-", "_", ";", "'", ".", "!", "/", "?"};
+            string[] separators = {" "};
             string[] holder = _text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
             for (int index = 0; index < holder.Length; index++)
             {
@@ -56,6 +56,15 @@ namespace WordCounter.Models
             for (int j = 0; j < _splitText.Count; j++)
             {
                 string stringHolder = _splitText[j];
+                string[] endCheck = {",", ".", "!", "?"};
+                char[] charsTrim = {',', '.', '!', '?'};
+                for (int x = 0; x <= 3; x++)
+                {
+                  if (stringHolder.EndsWith(endCheck[x]) == true)
+                  {
+                    stringHolder = stringHolder.TrimEnd(charsTrim);
+                  }
+                }
                 if (stringHolder.ToLower() == _word.ToLower())
                 {
                     _counter++;

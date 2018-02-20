@@ -79,7 +79,7 @@ namespace WordCounter.Models.Tests
         {
             //Arrange
             string word = "hello";
-            string text = "hello world hello I'm hello Stephanie";
+            string text = "hello world hello I'm hello, Stephanie! HELLO! Yes? Hello?";
             RepeatCounter newRepeatCounter = new RepeatCounter(word, text);
             newRepeatCounter.SetSplitText();
 
@@ -88,7 +88,7 @@ namespace WordCounter.Models.Tests
             int compare = newRepeatCounter.GetCounter();
 
             //Assert
-            Assert.AreEqual(compare, 3);
+            Assert.AreEqual(5, compare);
         }
     }
 }
